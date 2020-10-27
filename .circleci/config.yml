@@ -12,3 +12,12 @@ jobs:
               sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run: docker-compose build
       - run: docker-compose up -d
+
+workflows:
+  run-app:
+    jobs:
+      - build
+          filters:
+            branches:
+              only:
+                - master
