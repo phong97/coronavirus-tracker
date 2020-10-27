@@ -1,9 +1,5 @@
 jobs:
   build:
-    docker:
-      - image: buildpack-deps:trusty
-
-    working_directory: /app
     steps:
       - run:
             name: Install Docker Compose
