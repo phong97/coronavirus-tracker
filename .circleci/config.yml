@@ -16,7 +16,7 @@ jobs:
 workflows:
   run-app:
     jobs:
-      - build
+      - build:
           filters:
             branches:
               only:
